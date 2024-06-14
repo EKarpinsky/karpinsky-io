@@ -40,6 +40,7 @@
   },
   "type": "module",
   "dependencies": {
-    "flowbite-svelte-icons": "^1.6.1"
+    "flowbite-svelte-icons": "^1.6.1",
+    "svelte-typewriter": "^3.2.3"
   }
 }

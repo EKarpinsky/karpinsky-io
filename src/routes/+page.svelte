@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Typewriter from 'svelte-typewriter';
 	import { GithubSolid, LinkedinSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
 	import profilePic from '../assets/profile_pic.jpeg';
 </script>
@@ -21,7 +22,7 @@
 				<polyline points="16 18 22 12 16 6"></polyline>
 				<polyline points="8 6 2 12 8 18"></polyline>
 			</svg>
-			<span class="ml-1.5">Karpinsky.io</span>
+			<span class="ml-1.5 hidden md:inline">Karpinsky.io</span>
 		</a>
 		<nav class="flex gap-4 sm:gap-6">
 			<a class="text-sm font-medium hover:underline underline-offset-4" href="#"> About </a>
@@ -31,8 +32,8 @@
 		</nav>
 	</header>
 	<main class="flex-1 flex flex-col items-center justify-start">
-		<section class="w-full py-16 md:py-24 lg:py-64 z-20">
-			<div class="container space-y-12 px-4 md:px-6 dark py-10">
+		<section class="py-16 md:py-24 lg:py-64">
+			<div class="container space-y-12 dark py-10">
 				<div class="flex flex-col items-center space-y-4 text-center">
 					<img
 						src={profilePic}
@@ -44,12 +45,33 @@
 					/>
 					<div class="space-y-2">
 						<h1 class="text-3xl font-bold tracking-tighter sm:text-5xl">
-							Eli Karpinsky<span class="text-gray-500 header__tld">.io</span>
+							Eli Karpinsky<span class="typewriter-wrapper">
+								<Typewriter
+									loop={true}
+									interval={150}
+									mode="loopRandom"
+									cursor={true}
+									element="span"
+									wordInterval={2000}
+									unwriteInterval={100}
+								>
+									<span class="text-gray-500">.js</span>
+									<span class="text-gray-500">.css</span>
+									<span class="text-gray-500">.tsx</span>
+									<span class="text-gray-500">.sql</span>
+									<span class="text-gray-500">.gql</span>
+									<span class="text-gray-500">.io</span>
+									<span class="text-gray-500">.dev</span>
+									<span class="text-gray-500">.scss</span>
+									<span class="text-gray-500">.ts</span>
+									<span class="text-gray-500">.html</span>
+									<span class="text-gray-500">.py</span>
+									<span class="text-gray-500">.yaml</span>
+								</Typewriter></span
+							>
 						</h1>
 
-						<p
-							class="max-w-[700px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-						>
+						<p class="text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
 							Full-stack web applications &bullet; Systems design &bullet; Cloud infrastructure
 							&bullet; DevOps
 						</p>
@@ -88,10 +110,19 @@
 </div>
 
 <style>
-	.header__tld {
-		font-size: 0.5em;
+	:root {
+		--cursor-width: 5px;
 	}
-
+	.typewriter-wrapper {
+		width: 75px;
+		display: inline-block;
+		text-align: left;
+		font-size: 1.5rem;
+	}
+	h1 {
+		/*	negative margin to account for the typewriter-wrapper width*/
+		margin-right: -75px;
+	}
 	main a {
 		transition: 0.2s;
 		border-radius: 0.375rem;
