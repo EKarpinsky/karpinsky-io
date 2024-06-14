@@ -6,7 +6,7 @@
 
 <div class="dark min-h-dvh flex flex-col items-center justify-center bg-gray-900 text-white">
 	<header class="w-full px-4 md:px-6 h-20 flex items-center justify-between text-gray-300">
-		<a class="flex items-center justify-center" href="#">
+		<a class="flex items-center justify-center" href="/">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -25,10 +25,10 @@
 			<span class="ml-1.5 hidden md:inline">Karpinsky.io</span>
 		</a>
 		<nav class="flex gap-4 sm:gap-6">
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="#"> About </a>
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="#"> Projects </a>
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="#"> Blog </a>
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="#"> Contact </a>
+			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> About </a>
+			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Projects </a>
+			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Blog </a>
+			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Contact </a>
 		</nav>
 	</header>
 	<main class="flex-1 flex flex-col items-center justify-start">
