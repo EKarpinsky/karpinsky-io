@@ -31,10 +31,10 @@
 			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Contact </a>
 		</nav>
 	</header>
-	<main class="flex-1 flex flex-col items-center justify-start">
-		<section class="py-16 md:py-24 lg:py-64">
-			<div class="container space-y-12 dark py-10">
-				<div class="flex flex-col items-center space-y-4 text-center">
+	<main class="w-full flex-1 flex flex-col items-center justify-start">
+		<section class="w-full py-16 md:py-24 lg:py-64">
+			<div class="w-full space-y-12 dark py-10">
+				<div class="flex flex-col items-center space-y-6 text-center">
 					<img
 						src={profilePic}
 						width="200"
@@ -43,7 +43,7 @@
 						class="rounded-full shadow-lg"
 						style="aspect-ratio: 200 / 200; object-fit: cover; object-position: 50% 20%"
 					/>
-					<div class="space-y-2">
+					<div class="w-full space-y-2">
 						<h1 class="text-3xl font-bold tracking-tighter sm:text-5xl">
 							Eli Karpinsky<span class="typewriter-wrapper">
 								<Typewriter
@@ -70,11 +70,17 @@
 								</Typewriter></span
 							>
 						</h1>
-
-						<p class="text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-							Full-stack web applications &bullet; Systems design &bullet; Cloud infrastructure
-							&bullet; DevOps
-						</p>
+						<h3
+							class="text-gray-300 text-sm/relaxed md:text-lg/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						>
+							<span>Systems design</span> <span>&bullet;</span> <span>Consulting</span>
+						</h3>
+						<h3
+							class="text-gray-300 text-sm/relaxed md:text-lg/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						>
+							<span>Full-stack web apps</span> <span>&bullet;</span>
+							<span>Cloud & DevOps</span>
+						</h3>
 					</div>
 					<div class="flex gap-4">
 						<a
@@ -113,11 +119,29 @@
 	:root {
 		--cursor-width: 5px;
 	}
+	h3 {
+		& span {
+			display: inline-block;
+			width: 45%;
+			&:first-child {
+				text-align: right;
+			}
+			&:last-child {
+				text-align: left;
+			}
+			&:nth-child(2) {
+				width: auto;
+			}
+		}
+	}
 	.typewriter-wrapper {
 		width: 75px;
 		display: inline-block;
 		text-align: left;
-		font-size: 1.5rem;
+		font-size: 1rem;
+		@media (min-width: 640px) {
+			font-size: 1.5rem;
+		}
 	}
 	h1 {
 		/*	negative margin to account for the typewriter-wrapper width*/
