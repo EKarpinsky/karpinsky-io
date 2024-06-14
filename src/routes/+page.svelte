@@ -32,7 +32,7 @@
 		</nav>
 	</header>
 	<main class="w-full flex-1 flex flex-col items-center justify-start">
-		<section class="w-full py-16 md:py-24 lg:py-64">
+		<section class="w-full pb-16 md:pb-24 lg:pb-64 py-20">
 			<div class="w-full space-y-12 dark py-10">
 				<div class="flex flex-col items-center space-y-6 text-center">
 					<img
