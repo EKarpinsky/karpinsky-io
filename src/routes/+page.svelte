@@ -25,13 +25,13 @@
 			<span class="ml-1.5 hidden md:inline">Karpinsky.io</span>
 		</a>
 		<nav class="flex gap-4 sm:gap-6">
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> About </a>
+			<a class="text-sm font-medium hover:underline underline-offset-4" href="#about"> About </a>
 			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Projects </a>
 			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Blog </a>
 			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Contact </a>
 		</nav>
 	</header>
-	<main class="w-full flex-1 flex flex-col items-center justify-start">
+	<main class="w-full max-w-4xl flex-1 flex flex-col items-center justify-start">
 		<section class="w-full pb-16 md:pb-24 lg:pb-64 py-20">
 			<div class="w-full space-y-12 dark py-10">
 				<div class="flex flex-col items-center space-y-6 text-center">
@@ -112,6 +112,21 @@
 				</div>
 			</div>
 		</section>
+		<section id="about" class="w-full py-20">
+			<div class="w-full space-y-12 dark py-10">
+				<div class="flex flex-col items-center space-y-6 text-center">
+					<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h2>
+					<p
+						class="text-gray-300 text-sm/relaxed md:text-lg/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+					>
+						I'm a full-stack developer with a passion for building scalable, maintainable, and
+						performant web applications. I have experience with a wide range of technologies and
+						tools, and I'm always looking to learn more. I'm currently working as a software
+						engineer at a startup in the Bay Area.
+					</p>
+				</div>
+			</div>
+		</section>
 	</main>
 </div>
 
@@ -147,14 +162,19 @@
 		/*	negative margin to account for the typewriter-wrapper width*/
 		margin-right: -75px;
 	}
-	main a {
-		transition: 0.2s;
-		border-radius: 0.375rem;
-		border: 1px solid #4b5563;
+	main {
+		& a {
+			transition: 0.2s;
+			border-radius: 0.375rem;
+			border: 1px solid #4b5563;
 
-		&:hover {
-			background-color: rgba(255, 0, 0, 0.1);
-			transform: scale(1.05);
+			&:hover {
+				background-color: rgba(255, 0, 0, 0.1);
+				transform: scale(1.05);
+			}
+		}
+		& section:not(:first-child) {
+			opacity: 0;
 		}
 	}
 </style>
