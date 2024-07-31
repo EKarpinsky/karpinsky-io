@@ -24,12 +24,6 @@
 			</svg>
 			<span class="ml-1.5 hidden md:inline">Karpinsky.io</span>
 		</a>
-		<nav class="flex gap-4 sm:gap-6">
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> About </a>
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Projects </a>
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Blog </a>
-			<a class="text-sm font-medium hover:underline underline-offset-4" href="/"> Contact </a>
-		</nav>
 	</header>
 	<main class="w-full flex-1 flex flex-col items-center justify-start">
 		<section class="w-full pb-16 md:pb-24 lg:pb-64 py-20">
